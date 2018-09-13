@@ -1,0 +1,40 @@
+
+<nav class="navbar navbar-default">
+    <div id="menu-icon">
+        <a id="nav-toggle" (click)="_toggleSidebar()"><span>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </span></a>
+    </div>
+    <!-- <button class="hamburger" (click)="_toggleSidebar()">&#9776;</button> -->
+    <form class="form-inline my-1">
+        <div class="md-form form-sm my-0">
+            <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search" aria-label="Search">
+        </div>
+        <button class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
+    </form>
+</nav>
+
+<ng-sidebar-container style="height: 100vh">  
+        <!-- A sidebar -->
+        <ng-sidebar 
+          dock="true"
+          [(opened)]="_opened"
+          mode="push"
+          autoCollapseWidth=500>
+          
+          <p>Get currencies from aws</p>
+          <p>Sidebar contents</p>
+          <p>Sidebar contents</p>
+          <p>Sidebar contents</p>
+          <p>Sidebar contents</p>
+  
+        </ng-sidebar>
+  
+        <!-- Page content -->
+        <div ng-sidebar-content>
+            <p>Other pages are having so much fun here!</p>
+          <router-outlet></router-outlet>
+          <!-- <button (click)="_toggleSidebar()">Toggle sidebar</button> -->
+        </div>
+  
+</ng-sidebar-container>
